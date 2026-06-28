@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>
+Crime Scene Evidence Tracking
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>
+🔍 EvidenceTrack
+</h2>
+
+<button onclick="showPage('dashboard')">
+📊 Dashboard
+</button>
+
+<button onclick="showPage('add')">
+➕ Add Evidence
+</button>
+
+<button onclick="showPage('list')">
+📁 Evidence List
+</button>
+
+<button onclick="showArchived()">
+📦 Archived Cases
+</button>
+
+<button onclick="showPage('details')">
+📌 Details
+</button>
+
+<button onclick="showPage('custody')">
+🕒 Custody
+</button>
+
+<button onclick="showPage('about')">
+ℹ About
+</button>
+
+</div>
+
+<div class="main">
+
+<section id="dashboard">
+
+<h1>
+Crime Scene Evidence Tracking System
+</h1>
+
+<div class="cards">
+
+<div class="stat">
+<h3>Total Cases</h3>
+<p id="caseCount">0</p>
+</div>
+
+<div class="stat">
+<h3>Evidence Items</h3>
+<p id="evidenceCount">0</p>
+</div>
+
+<div class="stat">
+<h3>In Investigation</h3>
+<p id="investigationCount">
+0
+</p>
+</div>
+
+<div class="stat">
+<h3>
+Archived Cases
+</h3>
+<p id="archivedCount">
+0
+</p>
+</div>
+
+<div class="stat">
+<h3>
+Verified Cases
+</h3>
+<p id="verifiedCount">
+0
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section
+id="add"
+class="hidden">
+
+<h2>
+Add Evidence
+</h2>
+
+<input
+id="caseId"
+
+placeholder=
+"Enter Case ID">
+
+<input
+id="type"
+placeholder="Evidence Type">
+
+<input
+id="officer"
+
+placeholder=
+"Assigned Officer">
+
+
+<input
+type="date"
+
+id="date">
+
+<input
+type="file"
+id="photo"
+accept="image/*">
+
+<select id="status">
+
+<option value="Collected">
+Collected
+</option>
+
+<option value="In Lab">
+In Lab
+</option>
+
+<option value="Verified">
+Verified
+</option>
+
+<option value="Archived">
+Archived
+</option>
+
+</select>
+<textarea
+id="desc"
+placeholder="Description">
+</textarea>
+
+<button onclick="addEvidence()">
+Save Evidence
+</button>
+
+</section>
+
+
+<section
+id="list"
+class="hidden">
+
+<h2>
+Evidence Records
+</h2>
+
+<button
+onclick="exportData()">
+📄 Export Report
+</button>
+
+<input
+id="searchBox"
+placeholder="Search Case ID"
+onkeyup="searchEvidence()">
+
+<div id="records"></div>
+
+</section>
+
+
+<section
+id="details"
+class="hidden">
+
+<h2>
+Evidence Details
+</h2>
+
+<div id="detailsBox">
+Select Evidence
+</div>
+
+</section>
+<section
+id="archived"
+class="hidden">
+
+<h2>
+Archived Cases
+</h2>
+
+<div id="archivedBox">
+</div>
+
+</section>
+
+<section
+id="custody"
+class="hidden">
+
+<h2>
+
+Chain of Custody
+
+</h2>
+
+<input
+id="custodyOfficer"
+placeholder="Officer Name">
+
+<input
+id="action"
+placeholder="Action">
+
+
+<button
+onclick="addCustody()">
+
+Add Record
+
+</button>
+
+
+<div
+id="custodyBox">
+
+</div>
+
+</section>
+
+
+<section
+id="about"
+class="hidden">
+
+<h2>
+About Project
+</h2>
+
+<p>
+Track crime scene evidence securely.
+</p>
+
+<button
+onclick=
+"window.open('https://digitalheroesco.com/')"
+
+Built for Digital Heroes 
+
+</button>
+
+<p>
+Preksha M
+</p>
+
+<p>
+preksha130406@gmail.com
+</p>
+
+</section>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+
+</html>
